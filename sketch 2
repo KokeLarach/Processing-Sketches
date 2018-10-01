@@ -1,0 +1,21 @@
+PShape ellipse1;
+PShape ellipse2;
+
+void setup(){
+  size(500,500,P2D);
+  ellipse1 = createShape (ELLIPSE, 0, 0, 100, 50);
+  ellipse1.setStroke(color(255));
+  ellipse1.setStrokeWeight(2);
+  ellipse2 = createShape (ELLIPSE, 0, 0, 50, 50);
+  ellipse2.setStroke(color(255));
+  ellipse2.setStrokeWeight(2);
+}
+
+void draw(){
+ background(70);
+ translate(mouseX, mouseY);
+ ellipse1.setFill(color(map(mouseX, 0, width, 0, 255)));
+ ellipse2.setFill(color(map(mouseX, 0, width, 0, 255)));
+ shape(ellipse1);
+ shape(ellipse2);
+}
