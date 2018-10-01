@@ -1,0 +1,13 @@
+PShape ellipse;
+void setup(){
+  size(500,500,P2D);
+  ellipse = createShape (ELLIPSE, 0, 0, 100, 50);
+  ellipse.setStroke(color(255));
+  ellipse.setStrokeWeight(2);
+}
+void draw(){
+ background(70); 
+ translate(mouseX, mouseY);
+ ellipse.setFill(color(map(mouseX, 0, width, 0, 255)));
+ shape(ellipse);
+}
