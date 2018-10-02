@@ -1,0 +1,23 @@
+//similar to sketch 4, press 'q' to expand circle, 'a' to shrink
+
+int circle;
+
+void setup(){
+ size (700,700); 
+ background(random (255), random(255), random(255)); 
+ circle = 25;
+}
+
+void draw(){
+ ellipse(mouseX, mouseY, circle, 25);
+ fill(random (255), random(255), random(255));
+ if (keyPressed){
+  if(key == 'c'){
+   background(random (255), random(255), random(255));  
+  } else if(key == 'q'){
+   circle = circle + 5; 
+  } else if(key == 'a'){
+   circle = circle - 5; 
+  }
+ }
+}
